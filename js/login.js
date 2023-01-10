@@ -1,4 +1,4 @@
-/* Landing Page JavaScript */
+/* Login Page JavaScript */
 
 "use strict";
 
