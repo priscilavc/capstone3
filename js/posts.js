@@ -7,18 +7,18 @@ function SendPost() {
 
   const message = document.getElementById("myPost").value;
 
-  var myHeaders = new Headers();
+  let myHeaders = new Headers();
   myHeaders.append(
     "Authorization",
     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3MzM3Mjc1NiwiZXhwIjoxNjczNDU5MTU2fQ.4i8jrN6NXBa3C_9YUTCaYz6Fkz8kkKLUFNnNCLQPhFY"
   );
   myHeaders.append("Content-Type", "application/json");
 
-  var raw = JSON.stringify({
-    text: message,
+  let raw = JSON.stringify({
+    text: document.getElementById().value
   });
 
-  var requestOptions = {
+  let requestOptions = {
     method: "POST",
     headers: myHeaders,
     body: raw,
