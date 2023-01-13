@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>User Profile</title>
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,14 +11,25 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 </head>
+<header>
+  <!-- place navbar here -->
+  <!--Add post page on nav bar?-->
+</header>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-    <!--Add post page on nav bar?-->
-  </header>
+    <div id="container">
+      <div id="user-info">
+        <img id="profile-picture" src="">
+        <h1 id="username">John Doe</h1>
+        <p id="bio">Write About Yourself Here. This is your Biography :) </p>
+      </div>
+      <div id="edit-button">
+        <button onclick="editProfile()">Edit Profile</button>
+      </div>
+    </div>
+  <script src="script.js"></script>
+</body>
   <main>
 
     <!--Use document.getelementByID('ID NAME').value for the text area of posting a blog post-->
@@ -39,6 +51,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-</body>
+
 
 </html>
