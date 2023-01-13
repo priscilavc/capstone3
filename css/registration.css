@@ -1,4 +1,14 @@
-.registrationButtons {
-    display: flex;
-    justify-content: space-between;
+#loginbtn{
+    position: absolute;
+    width: 20%;
+    bottom: 100px;
+    left: 100px;
+    
 }
+
+#Register{
+    position: absolute;
+    width: 20%;
+    bottom: 15px;
+    left: 100px;
+    
