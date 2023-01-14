@@ -6,9 +6,16 @@
     
 }
 
-#Register{
+#registerbtn{
+    position: absolute;
+    width: 20%;
+    bottom: 100px;
+    left: 120px;
+}
+
+#signinlink{
     position: absolute;
     width: 100%;
-    bottom: 15px;
+    bottom: 50px;
     left: 100px;
 }
