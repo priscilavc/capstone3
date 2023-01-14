@@ -19,7 +19,7 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="js/auth.js"></script>
     <script>
-    //    if (isLoggedIn() === true) window.location.replace("posts.html");
+      //  if (isLoggedIn() === true) window.location.replace("posts.html");
     </script>
 </head>
 <body>
@@ -60,10 +60,9 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                <div class="registrationButtons">
-                                  <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = 'registration.html' ; ">Register</button>
                                   <button type="submit" class="btn btn-primary btn-lg">Login</button>
-                                </div>
+                                  <!-- <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = 'registration.html' ; ">Need to sign up?</button> -->
+                                  <a href="registration.html"><h1>Need to sign up?</h1></a>
                                 </div>
               
                               </form>

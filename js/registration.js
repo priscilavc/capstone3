@@ -14,7 +14,7 @@ function registerUser(event) {
 
     let raw = JSON.stringify({
     "username": username,
-    "fullName": password,
+    "fullname": password,
     "password": cpassword,
     });
 
