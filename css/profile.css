@@ -9,7 +9,7 @@ body {
 }
 
 .card-img-top{
-    height:200px;
+    height:300px;
 }
 
 .card-no-border .card {
@@ -103,16 +103,16 @@ p {
     width: 30%;
     margin-left: 5px;
     padding-right: 40px;
-    margin-top: -600px;
+    margin-top: -1150px;
   }
-  /* Fake image */
+ /* Fake image */
 .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
   }
   
-  /* Add a card effect for articles */
+/* Add a card effect for articles */
   .card {
     background-color: white;
     padding: 20px;
@@ -120,9 +120,23 @@ p {
     height: 300px;
   }
   
-  /* Clear floats after the columns */
+/* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
+/*Blog Entry*/
+main {
+   float: left;
+}
+.require {
+    color: #666;
+}
+label small {
+    color: #999;
+    font-weight: normal;
+}
+h1 {
+    text-align: center;
+}
