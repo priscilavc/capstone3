@@ -39,8 +39,10 @@ function login (loginData) {
     };
 
     return fetch(api + "/auth/login", options)
-        .then(response => response.json())
+        .then(response => response.json()
+        )
         .then(loginData => {
+            console.log(loginData);
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
             window.location.assign("/posts");  // redirect
         });
