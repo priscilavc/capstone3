@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="css/global.css">
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="/css/posts.css">
+    <link rel="stylesheet" href="css/posts.css">
 
     <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <script src="/js/auth.js"></script>
     <script>
         if (isLoggedIn() === false) window.location.replace("/registration.html");
     </script>
@@ -30,26 +29,25 @@
     <header>
         <h1>POSTS PAGE</h1>
         <h1>Create a post</h1>
-
-        <input text="" id="myPost"> Test
-        <textarea>
-
-        </textarea>
-        <button onclick="SendPost()">Create a Post</button>
     </header>
 
-    <main></main>
+    <main>
+        <input type="text" id="getPost">
+        <p id="displayPost"></p>
+        <button id="postBtn" onclick="SendPost(); GetAllPost()">Create a Post</button>
+    </main>
 
-    <footer></footer>
-
-
+    <footer>
     <!-- Bootstrap Bundle (including Popper for popovers) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
 
     <!-- Page-specific code -->
-    <script src="posts/posts.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/auth.js"></script>
+
+    </footer>
 </body>
 
 </html>
