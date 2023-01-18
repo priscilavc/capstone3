@@ -2,66 +2,32 @@
 
 "use strict";
 
-function SendPost() {
-
-  let loginData = getLoginData();
-
-  let myHeaders = new Headers();
-myHeaders.append("accept", "application/json");
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", 
-"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3MzcxODUxNCwiZXhwIjoxNjczODA0OTE0fQ.znjss6C2dROfoAPWxUayRbEuoh45gxDrIXfhiB3ppUc",
-loginData.token);
-
-let raw = JSON.stringify({
-  text: document.getElementById("getPost").value,
-});
-
-let requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
-
-fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-}
-
 function GetAllPost() {
-  let displayPost = document.getElementById('displayPost');
+  let displayPosts = document.getElementById('displayPost');
   let loginData = getLoginData();
 
-  let myHeaders = new Headers();
+  var myHeaders = new Headers();
   myHeaders.append("accept", "application/json");
-  myHeaders.append("Content-Type", "application/json");
   myHeaders.append("Authorization", 
-  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3MzcxODUxNCwiZXhwIjoxNjczODA0OTE0fQ.znjss6C2dROfoAPWxUayRbEuoh45gxDrIXfhiB3ppUc"
-  + loginData.token);
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3NDA2ODI4MywiZXhwIjoxNjc0MTU0NjgzfQ.NhlmBFNUn4be5nXWZmOTluYDF2rlGVqm9LcZ-qkmvz0" + loginData.token);
 
-  let raw = "";
-
-  let requestOptions = {
+  var requestOptions = {
     method: 'GET',
     headers: myHeaders,
-    body: raw,
     redirect: 'follow'
   };
 
-  fetch("https://microbloglite.herokuapp.com/api/posts?limit=1000&offset=0", requestOptions)
-    .then(response => response.json())
+  fetch("https://microbloglite.herokuapp.com/api/posts?limit=2000&offset=0&username=userInfo", requestOptions)
+    .then(response => response.text())
     .then(result => {
       for(let i = 0; i < result.length; i++) {
-        let postInfo = `${result[i].username} <br> ${result[i].createdAt} <br> ${result[i].text} <br>`;
-        Element.innerHTML += postInfo + "<br>";
+        let userInfo = `${result[i].username} <br> ${result[i].createdAt} <br> ${result[i].text} <br>`;
+        Element.innerHTML += userInfo + "<br>";
       }
     })
     
   }
 GetAllPost();
-
 
 // Pre-made code from starter template of project provided by REmsey
 // let myHeaders = new Headers();
