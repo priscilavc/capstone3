@@ -2,7 +2,7 @@
 
 "use strict";
 
-const loginForm = document.getElementById("loginForm");
+const loginForm = document.querySelector("#login");
 
 loginForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
