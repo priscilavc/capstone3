@@ -19,8 +19,9 @@
     <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="/js/auth.js"></script>
     <script>
-        if (isLoggedIn() === false) window.location.replace("/registration.html");
+        if (isLoggedIn() === false) window.location.replace("/login.html");
     </script>
 </head>
 
@@ -32,9 +33,11 @@
     </header>
 
     <main>
-        <input type="text" id="getPost">
+
         <p id="displayPost"></p>
-        <button id="postBtn" onclick="SendPost(); GetAllPost()">Create a Post</button>
+        <button id="getAllPostsBtn" onclick="GetAllPost()">Read Posts</button>
+
+        <button onclick="logout()" id="logoutButton">Logout</button>
     </main>
 
     <footer>
@@ -44,8 +47,7 @@
     </script>
 
     <!-- Page-specific code -->
-    <script src="js/posts.js"></script>
-    <script src="js/auth.js"></script>
+    <script src="/js/posts.js"></script>
 
     </footer>
 </body>
