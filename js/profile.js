@@ -1,6 +1,10 @@
 "use strict";
 
-function CreateAPost() {
+
+function test(){
+alert('hi')
+}
+function CreatemAPost() {
 
   let loginData = getLoginData();
   var myHeaders = new Headers();
@@ -26,4 +30,3 @@ function CreateAPost() {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 }
-CreateAPost();
