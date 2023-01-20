@@ -55,14 +55,14 @@
 function createApost() {
   const token = getLoginData()
   console.log(token.token)
-  /*Causious */
-  let myHeaders = newHeaders();
+  const message = document.getElementById("postArea").value
+  let myHeaders = new Headers();
   myHeaders.append("Authorization", "bearer", + token.token);
   myHeaders.append("Content-type", "Application/json");
 
 
   let raw = JSON.stringify({
-    text:document.getElementById("postArea").value
+    text: message
   });
   console.log(raw)
 
