@@ -105,6 +105,10 @@ p {
   padding-right: 40px;
   margin-top: -1190px;
 }
+a {
+  color: #666;
+  text-decoration: underline;
+}
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
